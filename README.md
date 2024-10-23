@@ -135,5 +135,205 @@ These codes indicate that further action must be taken by the client to complete
 - This has the same semantics as the 302 Found response code, with the exception that the user agent must not change the HTTP method used: if a POST was used in the first request, a POST must be used in the redirected request.
 
 
- <h2 style="color:yellowgreen"></h2> 
+ <h2 style="color:yellowgreen">308 Permanent Redirect</h2> 
  
+
+ - This means that the resource is now permanently located at another URI, specified by the Location response header
+
+
+# Client error responses
+
+
+
+ ### <ins> Types of Client error responses</ins>
+
+ <h2 style="color:yellowgreen">400 Bad Request</h2> 
+
+ - Indicates that the server would not process the request due to something the server considered to be a client error. The reason for a 400 response is typically due to malformed request syntax, invalid request message framing, or deceptive request routing.
+
+ <h2 style="color:yellowgreen">401 Unauthorized</h2> 
+
+ - Indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.
+
+ <h2 style="color:yellowgreen">402 Payment Required</h2>
+
+ -  is a nonstandard response status code reserved for future use. 
+
+  <h2 style="color:yellowgreen">403 Forbidden</h2>
+
+  - Indicates that the server understood the request but refused to process it.
+
+  
+  <h2 style="color:yellowgreen">404 Not Found</h2>
+
+  - The code indicates that the server cannot find the requested resource.
+
+
+<h2 style="color:yellowgreen">405 Method Not Allowed</h2>
+
+
+
+- The code indicates that the server knows the request method, but the target resource doesn't support this method.
+
+<h2 style="color:yellowgreen">406 Not Acceptable</h2>
+
+- Indicates that the server could not produce a response matching the list of acceptable values defined in the request's proactive content negotiation headers and that the server was unwilling to supply a default representation.
+
+<h2 style="color:yellowgreen">407 Proxy Authentication Required</h2>
+
+- Indicates that the request did not succeed because it lacks valid authentication credentials for the proxy server that sits between the client and the server with access to the requested resource.
+
+<h2 style="color:yellowgreen">408 Request Timeout</h2>
+
+- The code indicates that the server would like to shut down this unused connection.
+
+<h2 style="color:yellowgreen">409 Conflict</h2>
+
+- Indicates a request conflict with the current state of the target resource.
+
+<h2 style="color:yellowgreen"> 410 Gone</h2>
+
+- Indicates that the target resource is no longer available at the origin server and that this condition is likely to be permanent.
+
+<h2 style="color:yellowgreen">411 Length Required</h2>
+
+- The status code indicates that the server refused to accept the request without a defined Content-Length header.
+
+<h2 style="color:yellowgreen">412 Precondition Failed</h2>
+
+- Indicates that access to the target resource was denied
+
+<h2 style="color:yellowgreen">413 Content Too Large</h2>
+
+- Indicates that the request entity was larger than limits defined by server. 
+
+<h2 style="color:yellowgreen">414 URI Too Long</h2>
+
+- Indicates that a URI requested by the client was longer than the server is willing to interpret.
+
+<h2 style="color:yellowgreen">415 Unsupported Media Type</h2>
+
+- The code indicates that the server refused to accept the request because the message content format is not supported.
+
+<h2 style="color:yellowgreen">416 Range Not Satisfiable</h2>
+
+- The ndicates that a server could not serve the requested ranges
+
+<h2 style="color:yellowgreen">417 Expectation Failed</h2>
+
+- The  status code indicates that the expectation given in the request's Expect header could not be met.
+
+<h2 style="color:yellowgreen">418 I'm a teapot</h2>
+
+- Indicates that the server refuses to brew coffee because it is, permanently, a teapot.
+
+<h2 style="color:yellowgreen">421 Misdirected Request</h2>
+
+- Indicates that the request was directed to a server that is not able to produce a response.
+
+<h2 style="color:yellowgreen">422 Unprocessable Content</h2>
+
+- Indicates that the server understood the content type of the request content, and the syntax of the request content was correct, but it was unable to process the contained instructions
+
+<h2 style="color:yellowgreen">423 Locked</h2>
+
+- Indicates that a resource is locked, meaning it can't be accessed. 
+
+
+<h2 style="color:yellowgreen">424 Failed Dependency</h2>
+
+- Indicates that the method could not be performed on the resource because the requested action depended on another action, and that action failed.
+
+<h2 style="color:yellowgreen">425 Too Early</h2>
+
+- Indicates that the server was unwilling to risk processing a request that might be replayed to avoid potential replay attacks.
+
+<h2 style="color:yellowgreen">426 Upgrade Required</h2>
+
+- The code indicates that the server refused to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.
+
+
+<h2 style="color:yellowgreen">428 Precondition Required</h2>
+
+- Indicates that the server requires the request to be conditional.
+
+<h2 style="color:yellowgreen">429 Too Many Requests</h2>
+
+- Indicates the client has sent too many requests in a given amount of time.
+
+
+<h2 style="color:yellowgreen">431 Request Header Fields Too Large</h2>
+
+- The code indicates that the server refuses to process the request because the request's HTTP headers are too long.
+
+<h2 style="color:yellowgreen">451 Unavailable For Legal Reasons</h2>
+
+- The code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
+
+
+# Server error responses
+
+They  indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+
+
+ ### <ins> Types of Server error responses</ins>
+
+ <h2 style="color:yellowgreen">500 Internal Server Error
+</h2>
+
+- indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
+
+ <h2 style="color:yellowgreen">501 Not Implemented
+</h2>
+
+- The code means that the server does not support the functionality required to fulfill the request.
+
+
+ <h2 style="color:yellowgreen">502 Bad Gateway
+</h2>
+
+- The code indicates that a server was acting as a gateway or proxy and that it received an invalid response from the upstream server.
+
+<h2 style="color:yellowgreen">503 Service Unavailable
+</h2>
+
+- The status code indicates that the server is not ready to handle the request.
+
+<h2 style="color:yellowgreen">504 Gateway Timeout
+</h2>
+
+- Indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server in order to complete the request.
+
+<h2 style="color:yellowgreen">505 HTTP Version Not Supported
+</h2>
+
+- The status code indicates that the HTTP version used in the request is not supported by the server.
+
+<h2 style="color:yellowgreen">506 Variant Also Negotiates
+</h2>
+
+- The ode is returned during content negotiation when there is recursive loop in the process of selecting a resource.
+
+
+<h2 style="color:yellowgreen">507 Insufficient Storage
+</h2>
+
+
+- The status code indicates that an action could not be performed because the server does not have enough available storage to successfully complete the request.
+
+<h2 style="color:yellowgreen">508 Loop Detected
+</h2>
+
+- status code indicates that the entire operation failed because it encountered an infinite loop while processing a request with Depth: infinity.
+
+
+<h2 style="color:yellowgreen">510 Not Extended
+</h2>
+
+- status code is sent when the client request declares an HTTP Extension (RFC 2774) that should be used to process the request, but the extension is not supported.
+
+<h2 style="color:yellowgreen">511 Network Authentication Required
+</h2>
+
+- The code indicates that the client needs to authenticate to gain network access.
