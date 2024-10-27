@@ -6,7 +6,9 @@
  We have five groups of HTTP response status code which are summarized below;
 
  # Informational responses
- description
+
+ This interim response indicates that the client should continue the request or ignore the response if the request is already finished.
+ 
 
  ### <ins> Types of infomation responses</ins>
 
